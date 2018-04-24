@@ -1,0 +1,61 @@
+{
+  "name": "k8s-dashboard-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "author": "Nathan Fiscus",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "electron-forge": "^5.2.0",
+    "electron-prebuilt-compile": "1.8.4"
+  },
+  "dependencies": {
+    "electron-compile": "^6.4.2",
+    "electron-squirrel-startup": "^1.0.0",
+    "path": "^0.12.7",
+    "url": "^0.11.0"
+  },
+  "config": {
+    "forge": {
+      "make_targets": {
+        "win32": ["squirrel"],
+        "darwin": ["dmg"]
+      },
+      "electronPackagerConfig": {
+        "packageManager": "npm",
+        "icon": "./images/k8s"
+      },
+      "electronWinstallerConfig": {
+        "name": "k8s_dashboard_app",
+        "authors": "Nathan Fiscus",
+        "appDirectory": "./src",
+        "setupIcon": "./images/k8s.ico",
+        "icon": "./images/k8s.ico",
+        "description":
+          "Electron App for running a the K8s dashboard with one click"
+      },
+      "electronInstallerDMG": {
+        "icon": "./images/k8s.icns"
+      },
+      "electronInstallerDebian": {},
+      "electronInstallerRedhat": {},
+      "github_repository": {
+        "owner": "",
+        "name": ""
+      },
+      "windowsStoreConfig": {
+        "packageName": "",
+        "name": "k8sdashboardapp"
+      }
+    }
+  }
+}
