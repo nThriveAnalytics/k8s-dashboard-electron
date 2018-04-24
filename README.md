@@ -1,4 +1,4 @@
-# K8s Dashboard in Electron App
+# K8s Dashboard in an Electron App
 
 This app runs the Kubernetes dashboard from within an electron app. The app runs `kubectl proxy` as a background process on startup.
 
